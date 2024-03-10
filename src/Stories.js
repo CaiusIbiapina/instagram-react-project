@@ -1,23 +1,34 @@
 import Story from "./Story";
+import ftgoku from "./img/goku.jpg"
+import ftvegeta from "./img/vegeta.jpg"
+import ftgohan from "./img/gohan.jpg"
+import fttrunks from "./img/trunks.jpg"
+import ftpiccolo from "./img/piccolo.jpg"
+import ftkuririn from "./img/kuririn.jpg"
+import ftkame from "./img/mestrekame.jpg"
+import ftbulma from "./img/bulma.jpg"
+import circle from "./img/stories_background.jpg"
 
 export default function Stories() {
+    const perfis = ['Goku', 'Vegeta', 'Gohan', 'Trunks', 'Piccolo', 'Kuririn', 'Mestre Kame', 'Bulma']; 
+
     return (
         <div class="stories">
-            <Story/>
+            <Story foto={ftgoku} nome="Goku"/>
 
-            <Story/>
+            <Story foto={ftvegeta} nome="Vegeta"/>
 
-            <Story/>
+            <Story foto={ftgohan} nome="Gohan"/>
 
-            <Story/>
+            <Story foto={fttrunks} nome="Trunks"/>
 
-            <Story/>
+            <Story foto={ftpiccolo} nome="Piccolo"/>
 
-            <Story/>
+            <Story foto={ftkuririn} nome="Kuririn"/>
 
-            <Story/>
+            <Story foto={ftkame} nome="Mestre Kame"/>
 
-            <Story/>
+            <Story foto={ftbulma} nome="Bulma"/>
 
             <div class="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>
@@ -25,5 +36,3 @@ export default function Stories() {
     </div>
     )
   }
-  
-// chamar o componente Story 8x passando atributos e exibir props

@@ -1,12 +1,13 @@
-export default function Story() {
+export default function Story(props) {
     return (
         <div class="story">
             <div class="imagem">
-                <img src="assets/img/9gag.svg" />
+                <img src={props.foto} alt="foto era aqui" />
             </div>
             <div class="usuario">
-                9gag
+                {props.nome}
             </div>
         </div>
     )
   }
+  //FALTA ADICIONAR CIRCULO STORY

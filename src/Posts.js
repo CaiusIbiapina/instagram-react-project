@@ -6,14 +6,17 @@ import ftgoku from "./img/goku.jpg"
 import ftkame from "./img/mestrekame.jpg"
 import ftkuririn from "./img/kuririn.jpg"
 
-export default function Posts() {
-    return (
-        <div class="posts">
-            <Post fotousuario={ftgoku} nomeusuario="Goku" fotoprincipal={postgoku}/>
+  export default function Posts() {
 
-            <Post fotousuario={ftkame} nomeusuario="Mestre Kame" fotoprincipal={postkame}/>
-
-            <Post fotousuario={ftkuririn} nomeusuario="Kuririn" fotoprincipal={postkuririn}/>
-      </div>
-    )
-  }
+    const postagens = [
+      {foto: ftgoku, usuario: "Goku", conteudo: postgoku},
+      {foto: ftkame, usuario: "Mestre Kame", conteudo: postkame},
+      {foto: ftkuririn, usuario: "Kuririn", conteudo: postkuririn}
+    ];
+  
+      return (
+          <div class="posts">
+            {postagens.map( (p) => <Post fotousuario={p.foto} nomeusuario={p.usuario} fotoprincipal={p.conteudo} />)}
+          </div>
+      )
+    }

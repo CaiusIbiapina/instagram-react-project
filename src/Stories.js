@@ -10,29 +10,24 @@ import ftbulma from "./img/bulma.jpg"
 import circle from "./img/stories_background.jpg"
 
 export default function Stories() {
-    const perfis = ['Goku', 'Vegeta', 'Gohan', 'Trunks', 'Piccolo', 'Kuririn', 'Mestre Kame', 'Bulma']; 
+    const stories = [
+    {foto:ftgoku, nome:"Goku"},
+    {foto:ftvegeta, nome:"Vegeta"},
+    {foto:ftgohan, nome:"Gohan"},
+    {foto:fttrunks, nome:"Trunks"},
+    {foto:ftpiccolo, nome:"Piccolo"},
+    {foto:ftkuririn, nome:"Kuririn"},
+    {foto:ftkame,nome:"Mestre Kame"},
+    {foto:ftbulma, nome:"Bulma"}
+    ]
 
     return (
         <div class="stories">
-            <Story foto={ftgoku} nome="Goku"/>
-
-            <Story foto={ftvegeta} nome="Vegeta"/>
-
-            <Story foto={ftgohan} nome="Gohan"/>
-
-            <Story foto={fttrunks} nome="Trunks"/>
-
-            <Story foto={ftpiccolo} nome="Piccolo"/>
-
-            <Story foto={ftkuririn} nome="Kuririn"/>
-
-            <Story foto={ftkame} nome="Mestre Kame"/>
-
-            <Story foto={ftbulma} nome="Bulma"/>
-
+            {stories.map( (s) => <Story foto={s.foto} nome={s.nome}/>)}
+            
             <div class="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
-    </div>
+        </div>
     )
   }

@@ -1,4 +1,17 @@
+import React from "react"
+
 export default function Post(props) {
+    const [like, SetLike] = React.useState(false)
+    const [salvar, SetSalvar] = React.useState(false)
+
+    const curtida = () => {
+        SetLike(!like);
+    };
+
+    const salvamento = () => {
+        SetSalvar(!salvar);
+    };
+
     return (
         <div class="post">
             <div class="topo">
@@ -18,12 +31,12 @@ export default function Post(props) {
             <div class="fundo">
                 <div class="acoes">
                 <div>
-                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon name={like ? 'heart' : 'heart-outline'} onClick={curtida} ></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <ion-icon name={salvar ? 'bookmark' : 'bookmark-outline'} onClick={salvamento}></ion-icon>
                 </div>
                 </div>
 
